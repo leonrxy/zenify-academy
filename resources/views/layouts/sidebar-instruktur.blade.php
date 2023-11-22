@@ -7,10 +7,16 @@
     </div>
     <div class="sidebar-content">
         <ul>
-            <li class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
-                <a href="{{ url('dashboard') }}" class="link">
+            <li class="{{ request()->routeIs('instruktur.dashboard') ? 'active' : '' }}">
+                <a href="{{ url('instruktur/dashboard') }}" class="link">
                     <i class="ti-home"></i>
                     <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="{{ request()->routeIs('instruktur.kelas-saya') ? 'active' : '' }}">
+                <a href="{{ url('instruktur/kelas-saya') }}" class="link">
+                    <i class="ti-home"></i>
+                    <span>Kelas Saya</span>
                 </a>
             </li>
             <li class="menu-category">

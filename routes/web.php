@@ -76,6 +76,10 @@ Route::middleware(['auth', 'user-access:instruktur'])->group(function () {
 
     Route::get('/instruktur/dashboard', [InstrukturController::class, 'dashboard'])->name('instruktur.dashboard');
 });
+Route::middleware(['auth', 'user-access:instruktur'])->group(function () {
+
+    Route::get('/instruktur/kelas-saya', [InstrukturController::class, 'kelasSaya'])->name('instruktur.kelas-saya');
+});
 
 /*------------------------------------------
 --------------------------------------------
@@ -85,4 +89,8 @@ Admin Routes List
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+});
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
+
+    Route::get('/admin/kelola-program', [AdminController::class, 'kelolaProgram'])->name('admin.kelola-program');
 });

@@ -26,4 +26,8 @@ class InstrukturController extends Controller
     {
         return view('instruktur/dashboard');
     }
+    public function kelasSaya()
+    {
+        return view('instruktur/kelas-saya');
+    }
 }

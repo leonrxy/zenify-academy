@@ -13,6 +13,12 @@
                     <span>Dashboard</span>
                 </a>
             </li>
+            <li class="{{ request()->routeIs('admin.kelola-program') ? 'active' : '' }}">
+                <a href="{{ url('admin/kelola-program') }}" class="link">
+                    <i class="ti-file"></i>
+                    <span>Kelola Program</span>
+                </a>
+            </li>
             <li class="menu-category">
                 <span class="text-uppercase">Kelola</span>
             </li>

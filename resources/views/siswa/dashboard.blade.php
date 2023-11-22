@@ -63,6 +63,12 @@
             color: #888;
             font-size: 14px;
         }
+
+        .center-items {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
     </style>
 @endsection
 @section('body')
@@ -70,30 +76,42 @@
         <div class="title">
             <div class="dashboard-header">
                 <div class="dashboard-welcome">
-                    Selamat datang, [Nama Siswa]!
+                    Selamat datang, {{ Auth::user()->name }}!
                 </div>
             </div>
         </div>
 
         <!-- Statistik Dashboard -->
         <div class="content-wrapper">
-            <div class="row same-height dashboard-stats">
+            <div class="row same-height center-items">
                 <div class="col-md-4">
-                    <div class="card dashboard-stat-item">
-                        <div class="dashboard-stat-label">Kelas Aktif</div>
-                        <div class="dashboard-stat-value">3</div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Kelas Aktif</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5>3</h5>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card dashboard-stat-item">
-                        <div class="dashboard-stat-label">Tugas Belum Selesai</div>
-                        <div class="dashboard-stat-value">5</div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Tugas Belum Selesai</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5>5</h5>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card dashboard-stat-item">
-                        <div class="dashboard-stat-label">Ujian Mendatang</div>
-                        <div class="dashboard-stat-value">2</div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Ujian Mendatang</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5>2</h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -242,9 +260,9 @@
                 <div class="col-md-4">
                     <div class="card">
                         <!-- <div class="float-label">
-                                                                            <h6>Sales</h6>
-                                                                            <h4>$1500</h4>
-                                                                        </div> -->
+                                                                                                <h6>Sales</h6>
+                                                                                                <h4>$1500</h4>
+                                                                                            </div> -->
                         <div class="card-body">
                             <div id="apex-chart"></div>
                         </div>
@@ -252,9 +270,9 @@
                     <br>
                     <div class="card">
                         <!-- <div class="float-label">
-                                                                            <h6>Profit</h6>
-                                                                            <h4>$500</h4>
-                                                                        </div> -->
+                                                                                                <h6>Profit</h6>
+                                                                                                <h4>$500</h4>
+                                                                                            </div> -->
                         <span></span>
 
                         <div class="card-body">

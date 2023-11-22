@@ -18,29 +18,25 @@
                         </div>
                         <div class="card-body">
                             <!-- Daftar Live Class -->
-                            <div class="live-class-card">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Kimia Dasar</h5>
-                                        <p class="card-text">Instruktur: Prof. Instruktur</p>
-                                        <p class="card-text">Waktu: Senin, 10:00 - 11:30</p>
-                                        <p class="card-text">Deskripsi: Deskripsi live class akan ditampilkan di sini.</p>
-                                        <a href="#" class="btn btn-success" data-toggle="modal"
-                                            data-target="#liveClassModal1">Rincian</a>
-                                    </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kimia Dasar</h5>
+                                    <p class="card-text">Instruktur: Prof. Instruktur</p>
+                                    <p class="card-text">Waktu: Senin, 10:00 - 11:30</p>
+                                    <p class="card-text">Deskripsi: Deskripsi live class akan ditampilkan di sini.</p>
+                                    <a href="#" class="btn btn-success" data-toggle="modal"
+                                        data-target="#liveClassModal1">Rincian</a>
                                 </div>
                             </div>
 
-                            <div class="live-class-card">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Sejarah Modern</h5>
-                                        <p class="card-text">Instruktur: Dr. Instruktur</p>
-                                        <p class="card-text">Waktu: Rabu, 14:00 - 15:30</p>
-                                        <p class="card-text">Deskripsi: Deskripsi live class akan ditampilkan di sini.</p>
-                                        <a href="#" class="btn btn-success" data-toggle="modal"
-                                            data-target="#liveClassModal2">Rincian</a>
-                                    </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sejarah Modern</h5>
+                                    <p class="card-text">Instruktur: Dr. Instruktur</p>
+                                    <p class="card-text">Waktu: Rabu, 14:00 - 15:30</p>
+                                    <p class="card-text">Deskripsi: Deskripsi live class akan ditampilkan di sini.</p>
+                                    <a href="#" class="btn btn-success" data-toggle="modal"
+                                        data-target="#liveClassModal2">Rincian</a>
                                 </div>
                             </div>
                             <!-- Tambahkan card live class lainnya sesuai kebutuhan -->

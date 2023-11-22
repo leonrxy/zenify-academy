@@ -26,4 +26,8 @@ class AdminController extends Controller
     {
         return view('admin/dashboard');
     }
+    public function kelolaProgram()
+    {
+        return view('admin/kelola-program');
+    }
 }
