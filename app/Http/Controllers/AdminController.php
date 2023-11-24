@@ -28,6 +28,10 @@ class AdminController extends Controller
     }
     public function kelolaProgram()
     {
-        return view('admin/kelola-program');
+        return view('admin/kelola-program/index');
+    }
+    public function tambahProgram()
+    {
+        return view('admin/kelola-program/tambah');
     }
 }

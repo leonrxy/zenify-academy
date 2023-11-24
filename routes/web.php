@@ -3,9 +3,9 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InstrukturController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\ProgramController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +21,7 @@ use App\Http\Controllers\SiswaController;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/program', function () {
-    return view('program');
-});
+Route::get('/program', [ProgramController::class, 'homeView']);
 Route::get('/tentang', function () {
     return view('tentang');
 });
@@ -92,5 +90,14 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 });
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
-    Route::get('/admin/kelola-program', [AdminController::class, 'kelolaProgram'])->name('admin.kelola-program');
+    Route::get('/admin/kelola-program', [ProgramController::class, 'index'])->name('admin.kelola-program.index');
+});
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
+    Route::get('/admin/kelola-program/tambah', [AdminController::class, 'tambahProgram'])->name('admin.kelola-program.tambah');
+});
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
+    Route::post('admin/kelola-program/tambahProgram', [ProgramController::class, 'tambahProgram'])->name('admin.kelola-program.tambahProgram');
+});
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
+    Route::delete('/admin/kelola-program/hapus', [ProgramController::class, 'hapus'])->name('admin.kelola-program.hapus');
 });

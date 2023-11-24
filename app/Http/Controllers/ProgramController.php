@@ -4,56 +4,68 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Program;
+use Illuminate\Validation\ValidationException;
 
 class ProgramController extends Controller
 {
     public function index()
     {
         $programs = Program::all();
-        return view('admin.kelola-program', compact('programs'));
+        return view('admin.kelola-program.index', compact('programs'));
     }
 
-    public function create()
+    public function edit($id)
     {
-        return view('admin.kelola-program.create');
+        $program = Program::find($id);
+        return view('admin.kelola-program.edit', compact('program'));
+    }
+    public function hapus(Request $request)
+    {
+        $programName = $request->input('program');
+
+        try {
+            $program = Program::where('nama', $programName)->firstOrFail();
+            $program->delete();
+            return redirect()->route('admin.kelola-program.index')->with('success', 'Program berhasil dihapus');
+        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $exception) {
+            return redirect()->route('admin.kelola-program.index')->with('error', 'Program tidak ditemukan atau gagal dihapus');
+        }
     }
 
-    public function store(Request $request)
+    public function homeView()
     {
-        $request->validate([
-            'nama' => 'required',
-            'harga' => 'required',
-            'jangka_waktu' => 'required',
-            'waktu_pertemuan' => 'required',
-            'deskripsi' => 'required',
-            'info_1' => 'required',
-            'na_info_1' => 'required',
-            'info_2' => 'required',
-            'na_info_2' => 'required',
-            'info_3' => 'required',
-            'na_info_3' => 'required',
-            'style' => 'required',
-            'label' => 'required',
-            'info_label' => 'required',
-        ]);
+        $programs = Program::all();
+        return view('program', compact('programs'));
+    }
 
-        $program = new Program;
-        $program->nama = $request->nama;
-        $program->harga = $request->harga;
-        $program->jangka_waktu = $request->jangka_waktu;
-        $program->waktu_pertemuan = $request->waktu_pertemuan;
-        $program->deskripsi = $request->deskripsi;
-        $program->info_1 = $request->info_1;
-        $program->na_info_1 = $request->na_info_1;
-        $program->info_2 = $request->info_2;
-        $program->na_info_2 = $request->na_info_2;
-        $program->info_3 = $request->info_3;
-        $program->na_info_3 = $request->na_info_3;
-        $program->style = $request->style;
-        $program->label = $request->label;
-        $program->info_label = $request->info_label;
-        $program->save();
+    public function tambahProgram(Request $request)
+    {
+        try {
+            //dd('Controller is called!');
+            $validatedData = $request->validate([
+                'nama' => 'required',
+                'harga' => 'required',
+                'jangka_waktu' => 'required',
+                'jml_pertemuan' => 'required',
+                'waktu_pertemuan' => 'required',
+                'info_1' => 'required',
+                'na_info_1' => '',
+                'info_2' => 'required',
+                'na_info_2' => '',
+                'info_3' => 'required',
+                'na_info_3' => '',
+                'style' => '',
+                'label' => '',
+                'info_label' => '',
+            ]);
 
-        return redirect('admin/kelola-program')->with('success', 'Data Program Berhasil Ditambahkan!');
+            Program::create($validatedData);
+
+            return redirect()->route('admin.kelola-program.index')->with('success', 'Data Program Berhasil Ditambahkan!');
+        } catch (ValidationException $e) {
+            return redirect()->route('admin.kelola-program.index')->withErrors($e->errors())->with('error', 'Terjadi kesalahan validasi.');
+        } catch (\Exception $e) {
+            return redirect()->route('admin.kelola-program.index')->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
+        }
     }
 }

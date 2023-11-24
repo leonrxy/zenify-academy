@@ -17,8 +17,8 @@ class Program extends Model
         'nama',
         'harga',
         'jangka_waktu',
+        'jml_pertemuan',
         'waktu_pertemuan',
-        'deskripsi',
         'info_1',
         'na_info_1',
         'info_2',
@@ -29,4 +29,16 @@ class Program extends Model
         'label',
         'info_label',
     ];
+
+    // Mutator untuk atribut 'harga'
+    public function setHargaAttribute($value)
+    {
+        $this->attributes['harga'] = str_replace(',', '', $value);
+    }
+
+    // Accessor untuk atribut 'harga'
+    public function getHargaAttribute($value)
+    {
+        return number_format($value, 0, ',', '.');
+    }
 }

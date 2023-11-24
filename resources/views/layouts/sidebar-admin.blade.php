@@ -7,13 +7,13 @@
     </div>
     <div class="sidebar-content">
         <ul>
-            <li class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
+            <li class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
                 <a href="{{ url('dashboard') }}" class="link">
                     <i class="ti-home"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li class="{{ request()->routeIs('admin.kelola-program') ? 'active' : '' }}">
+            <li class="{{ request()->routeIs('admin.kelola-program.index') ? 'active' : '' }}">
                 <a href="{{ url('admin/kelola-program') }}" class="link">
                     <i class="ti-file"></i>
                     <span>Kelola Program</span>
@@ -28,25 +28,25 @@
                     <span>Kelola User</span>
                 </a>
                 <ul class="sub-menu {{ request()->routeIs('element-*') ? 'expand' : '' }}">
-                    <li class=""><a href="" class="link"><span>Kelola Instruktur</span></a></li>
-                    <li><a href="element-accordion.html" class="link"><span>Kelola Siswa</span></a></li>
+                    <li><a href="#" class="link"><span>Kelola Instruktur</span></a></li>
+                    <li><a href="#" class="link"><span>Kelola Siswa</span></a></li>
                 </ul>
             </li>
             <li class="">
-                <a href="charts.html" class="link">
+                <a href="#" class="link">
                     <i class="ti-bar-chart"></i>
                     <span>Kelola Kursus</span>
                 </a>
             </li>
             <li class="{{ request()->is('fullcalendar.html') ? 'active' : '' }}">
-                <a href="fullcalendar.html" class="link">
+                <a href="#" class="link">
                     <i class="ti-calendar"></i>
                     <span>Kelola Jadwal</span>
                 </a>
             </li>
 
             <li class="menu-category">
-                <span class="text-uppercase">Utilities</span>
+                <span class="text-uppercase">Laporan</span>
             </li>
             <li>
                 <a href="#" class="main-menu has-dropdown">
@@ -54,9 +54,9 @@
                     <span>Laporan</span>
                 </a>
                 <ul class="sub-menu">
-                    <li><a href="error-404.html" target="_blank" class="link"><span>Laporan</span></a></li>
-                    <li><a href="error-403.html" target="_blank" class="link"><span>Error 403</span></a></li>
-                    <li><a href="error-500.html" target="_blank" class="link"><span>Error 500</span></a></li>
+                    <li><a href="#" class="link"><span>Laporan Siswa</span></a></li>
+                    <li><a href="#" class="link"><span>Laporan Instruktur</span></a></li>
+                    <li><a href="#" class="link"><span>Laporan Transaksi</span></a></li>
                 </ul>
             </li>
         </ul>
