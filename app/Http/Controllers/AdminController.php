@@ -34,4 +34,8 @@ class AdminController extends Controller
     {
         return view('admin/kelola-program/tambah');
     }
+    public function kelolaSiswa()
+    {
+        return view('admin/kelola-siswa/index');
+    }
 }

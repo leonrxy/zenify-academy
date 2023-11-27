@@ -5,31 +5,8 @@
     <link href="../vendor/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../vendor/izitoast/css/iziToast.min.css">
     <style>
-        .program-table {
-            margin-top: 20px;
-        }
-
         .button-tambah {
             margin-bottom: 15px;
-        }
-
-        .alert {
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid transparent;
-            border-radius: 4px;
-        }
-
-        .alert-success {
-            color: #3c763d;
-            background-color: #dff0d8;
-            border-color: #d6e9c6;
-        }
-
-        .alert-danger {
-            color: #a94442;
-            background-color: #f2dede;
-            border-color: #ebccd1;
         }
     </style>
 @endsection

@@ -89,7 +89,6 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 });
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
-
     Route::get('/admin/kelola-program', [ProgramController::class, 'index'])->name('admin.kelola-program.index');
 });
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
@@ -100,4 +99,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 });
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::delete('/admin/kelola-program/hapus', [ProgramController::class, 'hapus'])->name('admin.kelola-program.hapus');
+});
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
+    Route::get('/admin/kelola-siswa', [ProgramController::class, 'index'])->name('admin.kelola-program.index');
 });
