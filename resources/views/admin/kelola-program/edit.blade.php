@@ -122,7 +122,7 @@
                                     value="{{ $program->info_label }}" class="form-control" disabled>
                             </div>
 
-                            <button type="submit" class="btn btn-primary" name="submit" value="simpan">Update
+                            <button type="submit" class="btn btn-primary mt-3" name="submit" value="simpan">Update
                                 Data</button>
                         </form>
                     </div>

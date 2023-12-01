@@ -112,8 +112,8 @@
                                 <input type="text" name="info_label" id="info_label" class="form-control" disabled>
                             </div>
 
-                            <button type="submit" class="btn btn-primary" name="submit" value="simpan">Simpan
-                                data</button>
+                            <button type="submit" class="btn btn-primary mt-3" name="submit" value="simpan">Simpan
+                                Data</button>
                         </form>
                     </div>
                 </div>
@@ -130,22 +130,6 @@
             document.getElementById('info_label').disabled = !this.checked;
         };
     </script>
-    @if (session()->get('success'))
-        <script>
-            iziToast.success({
-                message: '{{ session()->get('success') }}',
-                position: 'topRight',
-            });
-        </script>
-    @endif
-    @if (session()->get('error'))
-        <script>
-            iziToast.error({
-                message: '{{ session()->get('error') }}',
-                position: 'topRight',
-            });
-        </script>
-    @endif
 @endsection
 @section('runjs')
 @endsection

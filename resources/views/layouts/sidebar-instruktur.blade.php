@@ -34,12 +34,6 @@
             <li class="">
                 <a href="charts.html" class="link">
                     <i class="ti-bar-chart"></i>
-                    <span>Kursus Saya</span>
-                </a>
-            </li>
-            <li class="">
-                <a href="charts.html" class="link">
-                    <i class="ti-bar-chart"></i>
                     <span>Siswa Saya</span>
                 </a>
             </li>
@@ -61,19 +55,14 @@
                     <span>Pengumuman</span>
                 </a>
             </li>
-
-            <li class="menu-category">
-                <span class="text-uppercase">Utilities</span>
-            </li>
             <li>
                 <a href="#" class="main-menu has-dropdown">
                     <i class="ti-notepad"></i>
                     <span>Laporan</span>
                 </a>
                 <ul class="sub-menu">
-                    <li><a href="error-404.html" target="_blank" class="link"><span>Laporan</span></a></li>
-                    <li><a href="error-403.html" target="_blank" class="link"><span>Error 403</span></a></li>
-                    <li><a href="error-500.html" target="_blank" class="link"><span>Error 500</span></a></li>
+                    <li><a href="error-404.html" target="_blank" class="link"><span>Laporan Siswa</span></a></li>
+                    <li><a href="error-403.html" target="_blank" class="link"><span>Laporan Kelas</span></a></li>
                 </ul>
             </li>
         </ul>
