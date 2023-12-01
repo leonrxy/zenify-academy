@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\InstrukturController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\KelolaSiswaController;
+use App\Http\Controllers\KelolaInstrukturController;
+use App\Http\Controllers\KelolaKelasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -98,8 +101,20 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::post('admin/kelola-program/tambahProgram', [ProgramController::class, 'tambahProgram'])->name('admin.kelola-program.tambahProgram');
 });
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
+    Route::get('/admin/kelola-program/{id}/edit', [ProgramController::class, 'edit'])->name('admin.kelola-program.edit');
+});
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
+    Route::post('admin/kelola-program/{id}/editProgram', [ProgramController::class, 'editProgram'])->name('admin.kelola-program.editProgram');
+});
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::delete('/admin/kelola-program/hapus', [ProgramController::class, 'hapus'])->name('admin.kelola-program.hapus');
 });
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
-    Route::get('/admin/kelola-siswa', [ProgramController::class, 'index'])->name('admin.kelola-program.index');
+    Route::get('/admin/kelola-siswa', [KelolaSiswaController::class, 'index'])->name('admin.kelola-siswa.index');
+});
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
+    Route::get('/admin/kelola-instruktur', [KelolaInstrukturController::class, 'index'])->name('admin.kelola-instruktur.index');
+});
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
+    Route::get('/admin/kelola-kelas', [KelolaKelasController::class, 'index'])->name('admin.kelola-kelas.index');
 });

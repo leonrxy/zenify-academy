@@ -17,4 +17,9 @@ class Siswa extends Model
         'nama_lengkap', 'email', 'nohp', 'tgl_lahir', 'jenis_kelamin',
         'asal_sekolah', 'alamat', 'program', 'waktuprogram', 'foto_diri', 'waktu',
     ];
+
+    public function kelas()
+    {
+        return $this->belongsToMany(Kelas::class, 'kelas_siswa');
+    }
 }

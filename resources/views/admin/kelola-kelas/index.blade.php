@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('title')
+    Kelola Kelas
+@endsection
+
 @section('css')
     <link href="../vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
     <link href="../vendor/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" />
@@ -14,38 +18,44 @@
 @section('body')
     <div class="main-content">
         <div class="title">
-            Kelola Program
+            Kelola Kelas
         </div>
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{ route('admin.kelola-program.tambah') }}" class="btn mb-2 icon-left btn-primary"><i
-                            class="ti-plus"></i>Tambah
-                        Program</a>
+                    <a href="#" class="btn mb-2 icon-left btn-primary"><i class="ti-plus"></i>Tambah
+                        Kelas</a>
                     <!-- Tabel List Program -->
                     <table id="programTable" class="table dt-responsive display">
                         <thead>
                             <tr>
-                                <th>Nama Program</th>
-                                <th>Harga</th>
-                                <th>Jangka Waktu</th>
-                                <th>Jumlah Pertemuan</th>
+                                <th>Kode Kelas</th>
+                                <th>Mata Pelajaran</th>
+                                <th>Nama Instruktur</th>
+                                <th>Hari</th>
+                                <th>Jam Mulai</th>
+                                <th>Jam Selesai</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($programs as $program)
+                            @foreach ($kelas as $kelas)
                                 <tr>
-                                    <td>{{ $program->nama }}</td>
-                                    <td>{{ $program->harga }}</td>
-                                    <td>{{ $program->jangka_waktu }}</td>
-                                    <td>{{ $program->jml_pertemuan }}</td>
+                                    <td>{{ $kelas->kode_kelas }}</td>
+                                    <td>{{ $kelas->mata_pelajaran }}</td>
+                                    <td>
+                                        @foreach ($kelas->instrukturs as $instruktur)
+                                            {{ $instruktur->nama }}
+                                    </td>
+                                    <td>{{ $kelas->hari }}</td>
+                                    <td>{{ $kelas->jam_mulai }}</td>
+                                    <td>{{ $kelas->jam_selesai }}</td>
                                     <td>
                                         <button class="btn btn-info" data-bs-toggle="modal"
                                             data-bs-target="#detailProgram{{ $loop->iteration }}" type="button">Lihat
                                             Detail</button>
-                                        <a href="{{ route('admin.kelola-program.edit', ['id' => $program->id]) }}"><button class="btn btn-warning"
-                                                type="button">Edit</button></a>
+                                        <a href="#"><button
+                                                class="btn btn-warning" type="button">Edit</button></a>
 
                                         <div class="modal fade" id="detailProgram{{ $loop->iteration }}"
                                             data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -54,7 +64,7 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="staticBackdropLabel">
-                                                            Detail Program
+                                                            Detail Kelas
                                                         </h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
@@ -63,65 +73,39 @@
                                                         <table class="table table-fixed">
                                                             <thead>
                                                                 <tr>
-                                                                    <th colspan="3" class="table-success">Data Program
+                                                                    <th colspan="3" class="table-success">Data Instruktur
                                                                     </th>
                                                                 </tr>
                                                             </thead>
                                                             <tr>
-                                                                <td style="width:50%"> Nama Program</td>
+                                                                <td style="width:50%">Kode Kelas</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->nama }}</td>
+                                                                <td>{{ $kelas->kode_kelas }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Harga</td>
+                                                                <td>Nama Instruktur</td>
                                                                 <td style="width:0">:</td>
-                                                                <td>{{ $program->harga }}</td>
+                                                                <td>{{ $instruktur->nama }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Jangka Waktu </td>
+                                                                <td>Mata Pelajaran </td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->jangka_waktu }}</td>
+                                                                <td>{{ $kelas->mata_pelajaran }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Jumlah Pertemuan </td>
+                                                                <td>Hari </td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->jml_pertemuan }}x/Minggu</td>
+                                                                <td>{{ $kelas->hari }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Waktu Pertemuan</td>
+                                                                <td>Jam Mulai</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->waktu_pertemuan }} Menit/Pertemuan</td>
+                                                                <td>{{ $kelas->jam_mulai }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Deskripsi 1</td>
+                                                                <td>Jam Selesai</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->info_1 }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Deskripsi 2</td>
-                                                                <td>:</td>
-                                                                <td>{{ $program->info_2 }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Deskripsi 3</td>
-                                                                <td>:</td>
-                                                                <td>{{ $program->info_3 }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Style</td>
-                                                                <td>:</td>
-                                                                <td>{{ $program->nama }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Label</td>
-                                                                <td>:</td>
-                                                                <td>
-                                                                    @if ($program->info_label == '')
-                                                                        -
-                                                                    @else
-                                                                        {{ $program->info_label }}
-                                                                    @endif
-                                                                </td>
+                                                                <td>{{ $kelas->jam_selesai }}</td>
                                                             </tr>
                                                         </table>
                                                     </div>
@@ -147,13 +131,14 @@
                                                             aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        Apakah anda yakin ingin menghapus program '{{ $program->nama }}'?
+                                                        Apakah anda yakin ingin menghapus instruktur
+                                                        '{{ $kelas->nama }}'?
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
                                                             data-bs-dismiss="modal">Batal</button>
                                                         <form
-                                                            action="{{ route('admin.kelola-program.hapus', ['program' => $program->nama]) }}"
+                                                            action="{{ route('admin.kelola-program.hapus', ['program' => $kelas->nama_lengkap]) }}"
                                                             method="POST" style="display:inline;">
                                                             @csrf
                                                             @method('DELETE')
@@ -166,6 +151,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                            @endforeach
                             @endforeach
                             <!-- Tambahkan baris tabel untuk setiap program lainnya sesuai kebutuhan -->
                         </tbody>
@@ -181,7 +167,6 @@
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
     <script src="../vendor/izitoast/js/iziToast.min.js"></script>
-    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> --}}
     <script>
         $(document).ready(function() {
             $('#programTable').DataTable();

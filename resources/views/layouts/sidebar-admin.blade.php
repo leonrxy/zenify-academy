@@ -22,26 +22,31 @@
             <li class="menu-category">
                 <span class="text-uppercase">Kelola</span>
             </li>
-            <li class="{{ request()->routeIs('element-*') ? 'active open' : '' }}">
+            <li
+                class="{{ request()->routeIs('admin.kelola-instruktur.index') || request()->routeIs('admin.kelola-siswa.index') ? 'active open' : '' }}">
                 <a href="#" class="main-menu has-dropdown">
                     <i class="ti-desktop"></i>
                     <span>Kelola User</span>
                 </a>
                 <ul class="sub-menu {{ request()->routeIs('element-*') ? 'expand' : '' }}">
-                    <li><a href="#" class="link"><span>Kelola Instruktur</span></a></li>
-                    <li><a href="#" class="link"><span>Kelola Siswa</span></a></li>
+                    <li class="{{ request()->routeIs('admin.kelola-instruktur.index') ? 'active' : '' }}"><a
+                            href="{{ route('admin.kelola-instruktur.index') }}" class="link"><span>Kelola
+                                Instruktur</span></a></li>
+                    <li class="{{ request()->routeIs('admin.kelola-siswa.index') ? 'active' : '' }}"><a
+                            href="{{ route('admin.kelola-siswa.index') }}" class="link"><span>Kelola Siswa</span></a>
+                    </li>
                 </ul>
+            </li>
+            <li class="{{ request()->routeIs('admin.kelola-kelas.index') ? 'active' : '' }}">
+                <a href="{{ route('admin.kelola-kelas.index') }}" class="link">
+                    <i class="ti-calendar"></i>
+                    <span>Kelola Kelas</span>
+                </a>
             </li>
             <li class="">
                 <a href="#" class="link">
                     <i class="ti-bar-chart"></i>
                     <span>Kelola Kursus</span>
-                </a>
-            </li>
-            <li class="{{ request()->is('fullcalendar.html') ? 'active' : '' }}">
-                <a href="#" class="link">
-                    <i class="ti-calendar"></i>
-                    <span>Kelola Jadwal</span>
                 </a>
             </li>
 

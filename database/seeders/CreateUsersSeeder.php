@@ -28,7 +28,7 @@ class CreateUsersSeeder extends Seeder
             ],
             [
                 'name' => 'Leonardus Reka',
-                'email' => 'reka@gg.com',
+                'email' => 'user@gg.com',
                 'type' => 2,
                 'password' => bcrypt('123456'),
             ],

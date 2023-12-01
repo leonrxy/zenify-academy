@@ -14,38 +14,37 @@
 @section('body')
     <div class="main-content">
         <div class="title">
-            Kelola Program
+            Kelola Instruktur
         </div>
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{ route('admin.kelola-program.tambah') }}" class="btn mb-2 icon-left btn-primary"><i
-                            class="ti-plus"></i>Tambah
-                        Program</a>
+                    <a href="#" class="btn mb-2 icon-left btn-primary"><i class="ti-plus"></i>Tambah
+                        Instruktur</a>
                     <!-- Tabel List Program -->
                     <table id="programTable" class="table dt-responsive display">
                         <thead>
                             <tr>
-                                <th>Nama Program</th>
-                                <th>Harga</th>
-                                <th>Jangka Waktu</th>
-                                <th>Jumlah Pertemuan</th>
+                                <th>Nama Lengkap</th>
+                                <th>Email</th>
+                                <th>No HP</th>
+                                <th>Mata Pelajaran</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($programs as $program)
+                            @foreach ($instrukturs as $instrukturs)
                                 <tr>
-                                    <td>{{ $program->nama }}</td>
-                                    <td>{{ $program->harga }}</td>
-                                    <td>{{ $program->jangka_waktu }}</td>
-                                    <td>{{ $program->jml_pertemuan }}</td>
+                                    <td>{{ $instrukturs->nama }}</td>
+                                    <td>{{ $instrukturs->email }}</td>
+                                    <td>{{ $instrukturs->nohp }}</td>
+                                    <td>{{ $instrukturs->mata_pelajaran }}</td>
                                     <td>
                                         <button class="btn btn-info" data-bs-toggle="modal"
                                             data-bs-target="#detailProgram{{ $loop->iteration }}" type="button">Lihat
                                             Detail</button>
-                                        <a href="{{ route('admin.kelola-program.edit', ['id' => $program->id]) }}"><button class="btn btn-warning"
-                                                type="button">Edit</button></a>
+
+                                        <a href="#"><button class="btn btn-warning" type="button">Edit</button></a>
 
                                         <div class="modal fade" id="detailProgram{{ $loop->iteration }}"
                                             data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -54,7 +53,7 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="staticBackdropLabel">
-                                                            Detail Program
+                                                            Detail Instruktur
                                                         </h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
@@ -63,65 +62,50 @@
                                                         <table class="table table-fixed">
                                                             <thead>
                                                                 <tr>
-                                                                    <th colspan="3" class="table-success">Data Program
+                                                                    <th colspan="3" class="table-success">Data Instruktur
                                                                     </th>
                                                                 </tr>
                                                             </thead>
                                                             <tr>
-                                                                <td style="width:50%"> Nama Program</td>
+                                                                <td>Foto</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->nama }}</td>
+                                                                <td><img src="{{ $instrukturs->foto_profil }}"
+                                                                        alt="" width="250px"></td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Harga</td>
+                                                                <td style="width:50%">Nama Lengkap</td>
+                                                                <td>:</td>
+                                                                <td>{{ $instrukturs->nama }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Email</td>
                                                                 <td style="width:0">:</td>
-                                                                <td>{{ $program->harga }}</td>
+                                                                <td>{{ $instrukturs->email }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Jangka Waktu </td>
+                                                                <td>Nomor HP </td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->jangka_waktu }}</td>
+                                                                <td>{{ $instrukturs->nohp }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Jumlah Pertemuan </td>
+                                                                <td>Tanggal Lahir </td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->jml_pertemuan }}x/Minggu</td>
+                                                                <td>{{ $instrukturs->tgl_lahir }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Waktu Pertemuan</td>
+                                                                <td>Jenis Kelamin</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->waktu_pertemuan }} Menit/Pertemuan</td>
+                                                                <td>{{ $instrukturs->jenis_kelamin }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Deskripsi 1</td>
+                                                                <td>Alamat</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->info_1 }}</td>
+                                                                <td>{{ $instrukturs->alamat }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Deskripsi 2</td>
+                                                                <td>Kelas Diajar</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->info_2 }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Deskripsi 3</td>
-                                                                <td>:</td>
-                                                                <td>{{ $program->info_3 }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Style</td>
-                                                                <td>:</td>
-                                                                <td>{{ $program->nama }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Label</td>
-                                                                <td>:</td>
-                                                                <td>
-                                                                    @if ($program->info_label == '')
-                                                                        -
-                                                                    @else
-                                                                        {{ $program->info_label }}
-                                                                    @endif
-                                                                </td>
+                                                                <td>{{ $instrukturs->kelas_diajar }}</td>
                                                             </tr>
                                                         </table>
                                                     </div>
@@ -147,13 +131,14 @@
                                                             aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        Apakah anda yakin ingin menghapus program '{{ $program->nama }}'?
+                                                        Apakah anda yakin ingin menghapus instruktur
+                                                        '{{ $instrukturs->nama }}'?
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
                                                             data-bs-dismiss="modal">Batal</button>
                                                         <form
-                                                            action="{{ route('admin.kelola-program.hapus', ['program' => $program->nama]) }}"
+                                                            action="{{ route('admin.kelola-program.hapus', ['program' => $instrukturs->nama_lengkap]) }}"
                                                             method="POST" style="display:inline;">
                                                             @csrf
                                                             @method('DELETE')
@@ -181,7 +166,6 @@
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
     <script src="../vendor/izitoast/js/iziToast.min.js"></script>
-    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> --}}
     <script>
         $(document).ready(function() {
             $('#programTable').DataTable();

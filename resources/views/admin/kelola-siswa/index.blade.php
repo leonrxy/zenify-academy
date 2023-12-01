@@ -14,36 +14,37 @@
 @section('body')
     <div class="main-content">
         <div class="title">
-            Kelola Program
+            Kelola Siswa
         </div>
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{ route('admin.kelola-program.tambah') }}" class="btn mb-2 icon-left btn-primary"><i
-                            class="ti-plus"></i>Tambah
-                        Program</a>
+                    <a href="#" class="btn mb-2 icon-left btn-primary"><i class="ti-plus"></i>Tambah
+                        Siswa</a>
                     <!-- Tabel List Program -->
                     <table id="programTable" class="table dt-responsive display">
                         <thead>
                             <tr>
-                                <th>Nama Program</th>
-                                <th>Harga</th>
-                                <th>Jangka Waktu</th>
-                                <th>Jumlah Pertemuan</th>
+                                <th>Nama Lengkap</th>
+                                <th>Email</th>
+                                <th>No HP</th>
+                                <th>Jenis Program</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($programs as $program)
+                            @foreach ($siswas as $siswas)
                                 <tr>
-                                    <td>{{ $program->nama }}</td>
-                                    <td>{{ $program->harga }}</td>
-                                    <td>{{ $program->jangka_waktu }}</td>
-                                    <td>{{ $program->jml_pertemuan }}</td>
+                                    <td>{{ $siswas->nama_lengkap }}</td>
+                                    <td>{{ $siswas->email }}</td>
+                                    <td>{{ $siswas->nohp }}</td>
+                                    <td>{{ $siswas->program }}</td>
                                     <td>
                                         <button class="btn btn-info" data-bs-toggle="modal"
-                                            data-bs-target="#detailProgram{{ $loop->iteration }}" type="button">Lihat
-                                            Detail</button>
+                                            data-bs-target="#detailProgram{{ $loop->iteration }}"
+                                            type="button">Detail</button>
+
+                                        <a href="#"><button class="btn btn-warning" type="button">Edit</button></a>
 
                                         <div class="modal fade" id="detailProgram{{ $loop->iteration }}"
                                             data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -52,7 +53,7 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="staticBackdropLabel">
-                                                            Detail Program
+                                                            Detail Siswa
                                                         </h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
@@ -61,65 +62,60 @@
                                                         <table class="table table-fixed">
                                                             <thead>
                                                                 <tr>
-                                                                    <th colspan="3" class="table-success">Data Program
+                                                                    <th colspan="3" class="table-success">Data Siswa
                                                                     </th>
                                                                 </tr>
                                                             </thead>
                                                             <tr>
-                                                                <td style="width:50%"> Nama Program</td>
+                                                                <td>Foto</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->nama }}</td>
+                                                                <td><img src="{{ $siswas->foto_diri }}" alt=""
+                                                                        width="250px"></td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Harga</td>
+                                                                <td style="width:50%">Nama Lengkap</td>
+                                                                <td>:</td>
+                                                                <td>{{ $siswas->nama_lengkap }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Email</td>
                                                                 <td style="width:0">:</td>
-                                                                <td>{{ $program->harga }}</td>
+                                                                <td>{{ $siswas->email }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Jangka Waktu </td>
+                                                                <td>Nomor HP </td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->jangka_waktu }}</td>
+                                                                <td>{{ $siswas->nohp }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Jumlah Pertemuan </td>
+                                                                <td>Tanggal Lahir </td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->jml_pertemuan }}x/Minggu</td>
+                                                                <td>{{ $siswas->tgl_lahir }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Waktu Pertemuan</td>
+                                                                <td>Jenis Kelamin</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->waktu_pertemuan }} Menit/Pertemuan</td>
+                                                                <td>{{ $siswas->jenis_kelamin }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Deskripsi 1</td>
+                                                                <td>Asal Sekolah</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->info_1 }}</td>
+                                                                <td>{{ $siswas->asal_sekolah }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Deskripsi 2</td>
+                                                                <td>Alamat</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->info_2 }}</td>
+                                                                <td>{{ $siswas->alamat }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Deskripsi 3</td>
+                                                                <td>Jenis Program</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->info_3 }}</td>
+                                                                <td>{{ $siswas->program }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Style</td>
+                                                                <td>Waktu Program</td>
                                                                 <td>:</td>
-                                                                <td>{{ $program->nama }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Label</td>
-                                                                <td>:</td>
-                                                                <td>
-                                                                    @if ($program->info_label == '')
-                                                                        -
-                                                                    @else
-                                                                        {{ $program->info_label }}
-                                                                    @endif
-                                                                </td>
+                                                                <td>{{ $siswas->waktuprogram }}</td>
                                                             </tr>
                                                         </table>
                                                     </div>
@@ -145,13 +141,14 @@
                                                             aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        Apakah anda yakin ingin menghapus program '{{ $program->nama }}'?
+                                                        Apakah anda yakin ingin menghapus siswa
+                                                        '{{ $siswas->nama_lengkap }}'?
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
                                                             data-bs-dismiss="modal">Batal</button>
                                                         <form
-                                                            action="{{ route('admin.kelola-program.hapus', ['program' => $program->nama]) }}"
+                                                            action="{{ route('admin.kelola-program.hapus', ['program' => $siswas->nama_lengkap]) }}"
                                                             method="POST" style="display:inline;">
                                                             @csrf
                                                             @method('DELETE')
@@ -179,7 +176,6 @@
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
     <script src="../vendor/izitoast/js/iziToast.min.js"></script>
-    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> --}}
     <script>
         $(document).ready(function() {
             $('#programTable').DataTable();
