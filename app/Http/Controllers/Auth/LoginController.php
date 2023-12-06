@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 
@@ -65,6 +66,48 @@ class LoginController extends Controller
         } else {
             return redirect()->route('login')
                 ->with('error', 'Email-Address And Password Are Wrong.');
+        }
+    }
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return JsonResponse
+     */
+    public function apiLogin(Request $request): JsonResponse
+    {
+        $input = $request->all();
+
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        $credentials = $request->only('email', 'password');
+
+        $user = \App\Models\User::where('email', $credentials['email'])->first();
+
+        // if (!$user && !\Illuminate\Support\Facades\Hash::check($credentials['password'], $user->password)) {
+        //     // Email is correct, but password is wrong
+        //     return response()->json([
+        //         'success' => false,
+        //         'message' => 'Password Salah!',
+        //         'data' => null
+        //     ], 401);
+        // }
+
+        if (auth()->attempt($credentials)) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Login success',
+                'data' => auth()->user()
+            ], 200);
+        } else {
+            return response()->json([
+                'success' => false,
+                'message' => 'Email dan Password Salah!',
+                'data' => null
+            ], 401);
         }
     }
 }

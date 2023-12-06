@@ -53,7 +53,7 @@
                                     <input type="checkbox" name="remember" id="remember" class="form-check-input">
                                     <label for="remember" class="form-check-label">Remember Me</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary ms-auto">
+                                <button type="submit" class="btn btn-primary ms-auto" id="login">
                                     {{ __('Login') }}
                                 </button>
                             </div>
