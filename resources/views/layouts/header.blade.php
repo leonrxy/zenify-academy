@@ -46,7 +46,7 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
 
-            <a href="form/" class="get-started-btn">Daftar</a>
+            <a href="/register" class="get-started-btn">Daftar</a>
 
 
         </div>

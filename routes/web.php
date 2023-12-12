@@ -31,6 +31,9 @@ Route::get('/tentang', function () {
 Route::get('/kontak', function () {
     return view('kontak');
 });
+// Route::get('/register', function () {
+//     return view('auth/register2');
+// });
 
 Auth::routes();
 
@@ -40,7 +43,6 @@ Siswa Routes List
 --------------------------------------------
 --------------------------------------------*/
 Route::middleware(['auth', 'user-access:siswa'])->group(function () {
-
     Route::get('/dashboard', [SiswaController::class, 'dashboard'])->name('dashboard');
     Route::get('/kelasku', [SiswaController::class, 'kelasku'])->name('kelasku');
     Route::get('/jadwal', [SiswaController::class, 'jadwal'])->name('jadwal');

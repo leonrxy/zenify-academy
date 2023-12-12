@@ -3,7 +3,7 @@
 @section('body')
     <section id="hero" class="d-flex justify-content-center align-items-center">
         <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-            <h1>LeoSmart,<br>Bimbingan Belajar Terbaik di Surakarta</h1>
+            <h1>Zenify Academy,<br>Bimbingan Belajar Online dan Offline Terbaik di Surakarta</h1>
             <a href="index.php?page=program" class="btn-get-started">Daftar Sekarang</a>
         </div>
     </section><!-- End Hero -->
@@ -19,7 +19,7 @@
                         <img src="assets/img/bimbel.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                        <h3>Bimbingan Belajar LeoSmart</h3>
+                        <h3>Bimbingan Belajar Zenify Academy</h3>
                         <p class="fst-italic">
                             Bimbingan Belajar untuk SD, SMP, SMA, dan Umum. Juga melayani les privat di area Surakarta.
                             Kami melayani les privat untuk semua mata pelajaran atau pelajaran-pelajaran tertentu yang
@@ -32,7 +32,7 @@
                             <li><i class="bi bi-check-circle"></i> Pengajar Berkualitas.</li>
                         </ul>
                         <p>
-                            Segera daftar bimbingan belajar LeoSmart sekarang juga.
+                            Segera daftar bimbingan belajar Zenify Academy sekarang juga.
                         </p>
 
                     </div>
@@ -76,9 +76,9 @@
                 <div class="row">
                     <div class="col-lg-4 d-flex align-items-stretch">
                         <div class="content">
-                            <h3>Mengapa memilih LeoSmart?</h3>
+                            <h3>Mengapa memilih Zenify Academy?</h3>
                             <p>
-                                LeoSmart menggunakan sistem pembelajaran baru dan produk program baru. LeoSmart memfokuskan
+                                Zenify Academy menggunakan sistem pembelajaran baru dan produk program baru. Zenify Academy memfokuskan
                                 kinerja berfikir siswa melalui sistem PAIKEM (Pembelajaran Aktif, Inovatif, Kreative,
                                 Efektif dan Menyenangkan) untuk menuju sebuah pemahaman siswa otak kanan dan kiri.
                             </p>
@@ -102,7 +102,7 @@
                                     <div class="icon-box mt-4 mt-xl-0">
                                         <i class="bx bx-cube-alt"></i>
                                         <h4>Pengajar Profesional</h4>
-                                        <p>Semua pengajar LeoSmart merupakan pengajar profesional pada bidangnya</p>
+                                        <p>Semua pengajar Zenify Academy merupakan pengajar profesional pada bidangnya</p>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 d-flex align-items-stretch">

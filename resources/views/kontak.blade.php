@@ -35,7 +35,7 @@
                             <div class="email">
                                 <i class="bi bi-envelope"></i>
                                 <h4>Email</h4>
-                                <p>cs@leosmart.id</p>
+                                <p>cs@Zenify Academy.id</p>
                             </div>
 
                             <div class="phone">

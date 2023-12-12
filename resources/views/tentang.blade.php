@@ -5,8 +5,8 @@
         <!-- ======= Breadcrumbs ======= -->
         <div class="breadcrumbs" data-aos="fade-in">
             <div class="container">
-                <h2>Tentang Kami - LeoSmart | Bimbel Terpercaya di Surakarta</h2>
-                <p>LeoSmart merupakan Bimbingan Belajar untuk SD, SMP, SMA, dan Umum. Kami juga melayani les privat di area
+                <h2>Tentang Kami - Zenify Academy | Bimbel Terpercaya di Surakarta</h2>
+                <p>Zenify Academy merupakan Bimbingan Belajar untuk SD, SMP, SMA, dan Umum. Kami juga melayani les privat di area
                     Surakarta.</p>
             </div>
         </div><!-- End Breadcrumbs -->
@@ -20,7 +20,7 @@
                         <img src="assets/img/about.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                        <h3>LeoSmart - Bimbingan Belajar di Surakarta</h3>
+                        <h3>Zenify Academy - Bimbingan Belajar di Surakarta</h3>
                         <p class="fst-italic">
                             Bimbingan Belajar untuk SD, SMP, SMA, dan Umum. Juga melayani les privat di area Surakarta.
                             Kami melayani les privat untuk semua mata pelajaran atau pelajaran-pelajaran tertentu yang
