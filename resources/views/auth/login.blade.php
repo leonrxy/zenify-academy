@@ -11,6 +11,16 @@
                         <form method="POST" action="{{ route('login') }}" aria-label="abdul" data-id="abdul"
                             class="needs-validation" novalidate="" autocomplete="off">
                             @csrf
+                            @if (session()->get('error'))
+                                <div class="alert alert-danger">
+                                    {{ session()->get('error') }}
+                                </div>
+                            @endif
+                            @if (session('status'))
+                                <div class="alert alert-success">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
                             <div class="mb-3">
                                 <label class="mb-2 text-muted" for="email">E-Mail Address</label>
                                 <div class="input-group input-group-join mb-3">

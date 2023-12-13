@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = RouteServiceProvider::LOGIN;
 
     /**
      * Create a new controller instance.
@@ -64,10 +64,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        return $user;
+        if ($user) {
+            return redirect()->route('login')->with('success', 'Registration successful! You can now log in.');
+        } else {
+            // Handle registration failure (if needed)
+            // You may want to set an error message here and handle it accordingly
+            return redirect()->route('register')->withErrors(['error' => 'Registration failed.']);
+        }
     }
 }

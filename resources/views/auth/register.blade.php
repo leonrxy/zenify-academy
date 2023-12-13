@@ -11,10 +11,16 @@
                         <form method="POST" aria-label="abdul" data-id="abdul" class="needs-validation" novalidate=""
                             autocomplete="off" action="{{ route('register') }}">
                             @csrf
+                            @if (session()->get('error'))
+                                <div class="alert alert-danger">
+                                    {{ session()->get('error') }}
+                                </div>
+                            @endif
                             <div class="mb-3">
                                 <label class="mb-2 text-muted" for="name">Full Name</label>
                                 <div class="input-group input-group-join mb-3">
-                                    <input type="text" placeholder="Enter Your Name" class="form-control @error('name') is-invalid @enderror" name="name"
+                                    <input type="text" placeholder="Enter Your Name"
+                                        class="form-control @error('name') is-invalid @enderror" name="name"
                                         id="name" value="{{ old('name') }}" required autofocus>
                                     <span class="input-group-text rounded-end">&nbsp<i class="fa fa-user"></i>&nbsp</span>
                                     <div class="invalid-feedback">
@@ -27,8 +33,9 @@
                             <div class="mb-3">
                                 <label class="mb-2 text-muted" for="email">E-Mail Address</label>
                                 <div class="input-group input-group-join mb-3">
-                                    <input id="email" type="email" placeholder="Enter Email" class="form-control @error('email') is-invalid @enderror"
-                                        id="email" name="email" value="{{ old('email') }}" required autofocus>
+                                    <input id="email" type="email" placeholder="Enter Email"
+                                        class="form-control @error('email') is-invalid @enderror" id="email"
+                                        name="email" value="{{ old('email') }}" required autofocus>
                                     <span class="input-group-text rounded-end">&nbsp<i
                                             class="fa fa-envelope"></i>&nbsp</span>
                                     <div class="invalid-feedback">
@@ -44,8 +51,8 @@
                                     <label class="text-muted" for="password">Password</label>
                                 </div>
                                 <div class="input-group input-group-join mb-3">
-                                    <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Your password" id="password"
-                                        name="password" required>
+                                    <input type="password" class="form-control @error('password') is-invalid @enderror"
+                                        placeholder="Your password" id="password" name="password" required>
                                     <span class="input-group-text rounded-end password cursor-pointer">&nbsp<i
                                             class="fa fa-eye"></i>&nbsp</span>
                                     <div class="invalid-feedback">
@@ -60,8 +67,10 @@
                                     <label class="text-muted" for="password-confirm">Confirm Password</label>
                                 </div>
                                 <div class="input-group input-group-join mb-3">
-                                    <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" placeholder="Confirm Your Password"
-                                        id="password-confirm" name="password_confirmation" required autocomplete="new-password">
+                                    <input type="password"
+                                        class="form-control @error('password_confirmation') is-invalid @enderror"
+                                        placeholder="Confirm Your Password" id="password-confirm"
+                                        name="password_confirmation" required autocomplete="new-password">
                                     <span class="input-group-text rounded-end password cursor-pointer">&nbsp<i
                                             class="fa fa-eye"></i>&nbsp</span>
                                     <div class="invalid-feedback">

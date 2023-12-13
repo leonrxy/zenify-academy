@@ -64,8 +64,14 @@ class LoginController extends Controller
                 return redirect()->route('dashboard');
             }
         } else {
-            return redirect()->route('login')
-                ->with('error', 'Email-Address And Password Are Wrong.');
+            $user = \App\Models\User::where('email', $input['email'])->first();
+            if ($user) {
+                // Email is correct, but the password is wrong
+                return redirect()->route('login')->with('error', 'Incorrect password. Please try again.');
+            } else {
+                // Email is incorrect
+                return redirect()->route('login')->with('error', 'Email-Address not found.');
+            }
         }
     }
 
