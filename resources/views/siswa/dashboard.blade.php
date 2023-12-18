@@ -131,29 +131,34 @@
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td>Google Chrome</td>
-                                            <td>5120</td>
-                                            {{-- <td><i class="fa fa-caret-up text-success"></i></td> --}}
+                                            <td>Kelas baru akan segera dimulai. Periksa jadwal di dashboard untuk memastikan
+                                                Anda tidak melewatkan sesi pembelajaran penting.</td>
+                                            <td>1 Hari yang Lalu</td>
+                                            <td><i class="fa fa-caret-up text-success"></i></td>
 
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
-                                            <td>Mozilla Firefox</td>
+                                            <td>Mohon diperhatikan bahwa tagihan bulan ini sudah tersedia di dashboard.
+                                                Silakan lakukan pembayaran tepat waktu untuk kelancaran pembelajaran.</td>
                                             <td>4000</td>
-                                            {{-- <td><i class="fa fa-caret-up text-success"></i></td> --}}
+                                            <td><i class="fa fa-caret-up text-success"></i></td>
 
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
-                                            <td>Safari</td>
+                                            <td>Kami telah menambahkan materi baru ke dalam modul pembelajaran Anda. Cek
+                                                dashboard untuk akses langsung ke materi-materi terkini.</td>
                                             <td>8800</td>
-                                            {{-- <td><i class="fa fa-caret-down text-danger"></i></td> --}}
+                                            <td><i class="fa fa-caret-down text-danger"></i></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
-                                            <td>Opera Mini</td>
+                                            <td>Harap maklum bahwa kami akan melakukan pemeliharaan sistem pada tanggal
+                                                [tanggal]. Dashboard mungkin tidak dapat diakses selama beberapa jam. Terima
+                                                kasih atas pengertian Anda.</td>
                                             <td>4123</td>
-                                            {{-- <td><i class="fa fa-caret-up text-success"></i></td> --}}
+                                            <td><i class="fa fa-caret-up text-success"></i></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -175,9 +180,9 @@
                                         </div>
                                         <p>
                                             <a class="text-info" href="">
-                                                Bambang
+                                                {{ Auth::user()->name }}
                                             </a>
-                                            has completed his account.
+                                            has completed register account.
                                         </p>
                                     </div>
                                 </li>
@@ -260,9 +265,9 @@
                 <div class="col-md-4">
                     <div class="card">
                         <!-- <div class="float-label">
-                                                                                                <h6>Sales</h6>
-                                                                                                <h4>$1500</h4>
-                                                                                            </div> -->
+                                                                                                    <h6>Sales</h6>
+                                                                                                    <h4>$1500</h4>
+                                                                                                </div> -->
                         <div class="card-body">
                             <div id="apex-chart"></div>
                         </div>
@@ -270,9 +275,9 @@
                     <br>
                     <div class="card">
                         <!-- <div class="float-label">
-                                                                                                <h6>Profit</h6>
-                                                                                                <h4>$500</h4>
-                                                                                            </div> -->
+                                                                                                    <h6>Profit</h6>
+                                                                                                    <h4>$500</h4>
+                                                                                                </div> -->
                         <span></span>
 
                         <div class="card-body">

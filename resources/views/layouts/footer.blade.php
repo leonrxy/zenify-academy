@@ -5,25 +5,25 @@
             <div class="row">
 
                 <div class="col-lg-4 col-md-6 footer-contact">
-                    <h2 class="logo me-auto align-middle"><i class="ri-book-open-line me-1 img-fluid"></i>LeoSmart</h2>
+                    <h2 class="logo me-auto align-middle"><i class="ri-book-open-line me-1 img-fluid"></i>Zenify Academy</h2>
                     <p>Bimbingan Belajar Terbaik di Surakarta.</p>
                 </div>
 
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Menu</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="index.php?page=program">Program Bimbel</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="index.php?page=tentang">Tentang Kami</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="index.php?page=kontak">Kontak</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="form/">Daftar</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/program">Program Bimbel</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/tentang">Tentang Kami</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/kontak">Kontak</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/login">Login</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Contact</h4>
-                    <p>Jl. Kutai 6B Sumber Banjarsari Surakarta <br>Kode Pos: XXXXX</p>
-                    <p>Telp: +62 899 733 6565</p>
+                    <p>Jl. Kolang Kaling Surakarta <br>Kode Pos: XXXXX</p>
+                    <p>Telp: +62 8912 3456 78</p>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-newsletter">
@@ -44,7 +44,7 @@
     <div class="container d-md-flex py-4 clearfix justify-content-md-center">
         <div class="text-center">
             <div class="copyright">
-                Copyright &copy; 2023 <strong><span>LeoSmart</span></strong>. All Rights Reserved
+                Copyright &copy; 2023 <strong><span>Zenify Academy</span></strong>. All Rights Reserved
             </div>
         </div>
     </div>

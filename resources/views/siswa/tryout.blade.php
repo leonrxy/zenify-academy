@@ -9,6 +9,7 @@
 
         .tryout-thumbnail {
             max-width: 100%;
+            max-height: 240px;
             height: auto;
         }
     </style>
@@ -40,7 +41,7 @@
                 <div class="col-md-6">
                     <div class="tryout-card">
                         <div class="card">
-                            <img src="{{asset('assets/images/math.jpg')}}" alt="Tryout Thumbnail"
+                            <img src="{{asset('assets/images/english.jpg')}}" alt="Tryout Thumbnail"
                                 class="card-img-top tryout-thumbnail">
                             <div class="card-body">
                                 <h5 class="card-title">Tryout Bahasa Inggris</h5>

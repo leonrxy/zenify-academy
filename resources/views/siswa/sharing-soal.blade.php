@@ -79,7 +79,7 @@
                     <div class="card-body sharing-soal-card-content">
                         <h5 class="card-title">Soal Matematika</h5>
                         <p class="card-text">Kelas: 10</p>
-                        <p class="card-text">Deskripsi: Deskripsi soal akan ditampilkan di sini.</p>
+                        <p class="card-text">Berapa hasil penjumlahan 200+44?</p>
 
                         <!-- Bagian Komentar -->
                         <div class="comment-section">
@@ -87,18 +87,18 @@
                             <ul class="comment-list">
                                 <li class="comment">
                                     <div class="comment-avatar">
-                                        <img src="path/to/avatar1.jpg" alt="User Avatar">
+                                        <img src="{{ asset('assets/images/avatar1.png') }}" alt="User Avatar">
                                     </div>
                                     <div class="comment-text">
-                                        <strong>Nama Pengguna 1:</strong> Komentar pertama akan ditampilkan di sini.
+                                        <strong>Leonardus Reka</strong> <br>Jawabannya 244.
                                     </div>
                                 </li>
                                 <li class="comment">
                                     <div class="comment-avatar">
-                                        <img src="path/to/avatar2.jpg" alt="User Avatar">
+                                        <img src="{{ asset('assets/images/avatar2.png') }}" alt="User Avatar">
                                     </div>
                                     <div class="comment-text">
-                                        <strong>Nama Pengguna 2:</strong> Komentar kedua akan ditampilkan di sini.
+                                        <strong>Najwa Alfan</strong> <br>244.
                                     </div>
                                 </li>
                             </ul>

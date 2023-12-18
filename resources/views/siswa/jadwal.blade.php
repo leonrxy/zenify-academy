@@ -27,7 +27,6 @@
                                             <th scope="col">Mata Pelajaran</th>
                                             <th scope="col">Instruktur</th>
                                             <th scope="col">Jadwal</th>
-                                            <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -37,9 +36,6 @@
                                             <td>Matematika</td>
                                             <td>Dr. Instruktur</td>
                                             <td>Senin, Rabu (08:00 - 10:00)</td>
-                                            <td>
-                                                <a href="#" class="btn btn-sm btn-info">Lihat Detail</a>
-                                            </td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
@@ -47,9 +43,6 @@
                                             <td>Fisika</td>
                                             <td>Prof. Instruktur</td>
                                             <td>Selasa, Kamis (10:00 - 12:00)</td>
-                                            <td>
-                                                <a href="#" class="btn btn-sm btn-info">Lihat Detail</a>
-                                            </td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
@@ -57,9 +50,6 @@
                                             <td>Bahasa Inggris</td>
                                             <td>Drs. Instruktur</td>
                                             <td>Senin, Rabu (14:00 - 16:00)</td>
-                                            <td>
-                                                <a href="#" class="btn btn-sm btn-info">Lihat Detail</a>
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>

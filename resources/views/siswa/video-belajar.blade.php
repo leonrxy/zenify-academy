@@ -9,6 +9,7 @@
 
         .video-thumbnail {
             max-width: 100%;
+            max-height: 240px;
             height: auto;
         }
     </style>
@@ -40,7 +41,7 @@
                 <div class="col-md-6">
                     <div class="video-card">
                         <div class="card">
-                            <img src="{{asset('assets/images/math.jpg')}}" alt="Video Thumbnail"
+                            <img src="{{asset('assets/images/english.jpg')}}" alt="Video Thumbnail"
                                 class="card-img-top video-thumbnail">
                             <div class="card-body">
                                 <h5 class="card-title">Bahasa Inggris - Grammar</h5>
