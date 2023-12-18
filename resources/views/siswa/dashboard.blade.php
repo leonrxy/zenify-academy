@@ -141,7 +141,7 @@
                                             <th scope="row">2</th>
                                             <td>Mohon diperhatikan bahwa tagihan bulan ini sudah tersedia di dashboard.
                                                 Silakan lakukan pembayaran tepat waktu untuk kelancaran pembelajaran.</td>
-                                            <td>4000</td>
+                                            <td>3 Hari yang Lalu</td>
                                             <td><i class="fa fa-caret-up text-success"></i></td>
 
                                         </tr>
@@ -149,7 +149,7 @@
                                             <th scope="row">3</th>
                                             <td>Kami telah menambahkan materi baru ke dalam modul pembelajaran Anda. Cek
                                                 dashboard untuk akses langsung ke materi-materi terkini.</td>
-                                            <td>8800</td>
+                                            <td>4 Hari yang Lalu</td>
                                             <td><i class="fa fa-caret-down text-danger"></i></td>
                                         </tr>
                                         <tr>
@@ -157,7 +157,7 @@
                                             <td>Harap maklum bahwa kami akan melakukan pemeliharaan sistem pada tanggal
                                                 [tanggal]. Dashboard mungkin tidak dapat diakses selama beberapa jam. Terima
                                                 kasih atas pengertian Anda.</td>
-                                            <td>4123</td>
+                                            <td>7 Hari yang Lalu</td>
                                             <td><i class="fa fa-caret-up text-success"></i></td>
                                         </tr>
                                     </tbody>
@@ -265,23 +265,23 @@
                 <div class="col-md-4">
                     <div class="card">
                         <!-- <div class="float-label">
-                                                                                                    <h6>Sales</h6>
-                                                                                                    <h4>$1500</h4>
-                                                                                                </div> -->
+                                                                                                            <h6>Sales</h6>
+                                                                                                            <h4>$1500</h4>
+                                                                                                        </div> -->
                         <div class="card-body">
                             <div id="apex-chart"></div>
                         </div>
                     </div>
                     <br>
                     <div class="card">
-                        <!-- <div class="float-label">
-                                                                                                    <h6>Profit</h6>
-                                                                                                    <h4>$500</h4>
-                                                                                                </div> -->
+
                         <span></span>
 
                         <div class="card-body">
                             <div id="apex-chart-bar"></div>
+                            <div class="label">
+                                <h6>Progress Pembelajaran</h6>
+                            </div>
                         </div>
                     </div>
                 </div>

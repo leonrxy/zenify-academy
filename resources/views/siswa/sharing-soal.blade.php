@@ -109,6 +109,77 @@
                     </div>
                 </div>
 
+                <div class="sharing-soal-card" data-toggle="modal" data-target="#soalModal1">
+                    <div class="card-body sharing-soal-card-content">
+                        <h5 class="card-title">Soal Bahasa Inggris</h5>
+                        <p class="card-text">Kelas: 8</p>
+                        <p class="card-text">My sister is ___________ at painting. She has won several awards for her
+                            artwork. </p>
+
+                        <!-- Bagian Komentar -->
+                        <div class="comment-section">
+                            <h6>Komentar</h6>
+                            <ul class="comment-list">
+                                <li class="comment">
+                                    <div class="comment-avatar">
+                                        <img src="{{ asset('assets/images/avatar1.png') }}" alt="User Avatar">
+                                    </div>
+                                    <div class="comment-text">
+                                        <strong>Jehezkiel</strong> <br>Jawabannya talented.
+                                    </div>
+                                </li>
+                                <li class="comment">
+                                    <div class="comment-avatar">
+                                        <img src="{{ asset('assets/images/avatar2.png') }}" alt="User Avatar">
+                                    </div>
+                                    <div class="comment-text">
+                                        <strong>Iqbal</strong> <br>talented.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Bagian Jumlah Menjawab -->
+                        <p>Jumlah orang yang sudah menjawab: 2</p>
+                    </div>
+                </div>
+
+                <div class="sharing-soal-card" data-toggle="modal" data-target="#soalModal1">
+                    <div class="card-body sharing-soal-card-content">
+                        <h5 class="card-title">Soal Matematika</h5>
+                        <p class="card-text">Kelas: 9</p>
+                        <p class="card-text">Sebuah balok memiliki panjang 8 cm, lebar 5 cm, dan tinggi 3 cm. Hitunglah
+                            volume balok tersebut. </p>
+
+                        <!-- Bagian Komentar -->
+                        <div class="comment-section">
+                            <h6>Komentar</h6>
+                            <ul class="comment-list">
+                                <li class="comment">
+                                    <div class="comment-avatar">
+                                        <img src="{{ asset('assets/images/avatar1.png') }}" alt="User Avatar">
+                                    </div>
+                                    <div class="comment-text">
+                                        <strong>Leonardus Reka</strong> <br>V=panjang×lebar×tinggi <br>V=8×5×3 <br>V=120
+                                        cm³
+                                    </div>
+                                </li>
+                                <li class="comment">
+                                    <div class="comment-avatar">
+                                        <img src="{{ asset('assets/images/avatar2.png') }}" alt="User Avatar">
+                                    </div>
+                                    <div class="comment-text">
+                                        <strong>Loly Pentauli</strong> <br>120 cm^3.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Bagian Jumlah Menjawab -->
+                        <p>Jumlah orang yang sudah menjawab: 2</p>
+                    </div>
+                </div>
+
                 <!-- Tambahkan card soal lainnya sesuai kebutuhan -->
             </div>
         </div>
