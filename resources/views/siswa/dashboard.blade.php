@@ -265,12 +265,17 @@
                 <div class="col-md-4">
                     <div class="card">
                         <!-- <div class="float-label">
-                                                                                                            <h6>Sales</h6>
-                                                                                                            <h4>$1500</h4>
-                                                                                                        </div> -->
+                                                                                                                        <h6>Sales</h6>
+                                                                                                                        <h4>$1500</h4>
+                                                                                                                    </div> -->
                         <div class="card-body">
+                            <div class="label">
+                                <h6>Statistik Nilai</h6>
+                            </div>
                             <div id="apex-chart"></div>
+
                         </div>
+
                     </div>
                     <br>
                     <div class="card">
@@ -278,10 +283,10 @@
                         <span></span>
 
                         <div class="card-body">
-                            <div id="apex-chart-bar"></div>
                             <div class="label">
                                 <h6>Progress Pembelajaran</h6>
                             </div>
+                            <div id="apex-chart-bar"></div>
                         </div>
                     </div>
                 </div>
