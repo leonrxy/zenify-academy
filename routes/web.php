@@ -44,6 +44,7 @@ Siswa Routes List
 --------------------------------------------*/
 Route::middleware(['auth', 'user-access:siswa'])->group(function () {
     Route::get('/dashboard', [SiswaController::class, 'dashboard'])->name('dashboard');
+    Route::get('/profil', [SiswaController::class, 'profil'])->name('profil');
     Route::get('/kelasku', [SiswaController::class, 'kelasku'])->name('kelasku');
     Route::get('/jadwal', [SiswaController::class, 'jadwal'])->name('jadwal');
     Route::get('/live-class', [SiswaController::class, 'liveClass'])->name('live-class');

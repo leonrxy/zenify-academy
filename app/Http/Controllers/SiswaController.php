@@ -26,6 +26,10 @@ class SiswaController extends Controller
     {
         return view('siswa/dashboard');
     }
+    public function profil()
+    {
+        return view('siswa/profil');
+    }
     public function kelasku()
     {
         return view('siswa/kelasku');
