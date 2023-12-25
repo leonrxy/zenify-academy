@@ -21,4 +21,17 @@ class KelolaSiswaController extends Controller
 
         return response()->json($results);
     }
+
+    public function hapus(Request $request)
+    {
+        $idsiswa = $request->input('idsiswa');
+
+        try {
+            $siswa = Siswa::where('id', $idsiswa)->firstOrFail();
+            $siswa->delete();
+            return redirect()->route('admin.kelola-siswa.index')->with('success', 'Siswa berhasil dihapus');
+        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $exception) {
+            return redirect()->route('admin.kelola-siswa.index')->with('error', 'Siswa tidak ditemukan atau gagal dihapus');
+        }
+    }
 }

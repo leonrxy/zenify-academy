@@ -49,6 +49,12 @@
                     <span>Sharing Soal</span>
                 </a>
             </li>
+            <li class="{{ request()->routeIs('daftar-program') ? 'active' : '' }}">
+                <a href="{{ url('daftar-program') }}" class="link">
+                    <i class="ti-comment-alt"></i>
+                    <span>Daftar Program</span>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

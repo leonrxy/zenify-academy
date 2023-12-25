@@ -1,4 +1,5 @@
 @extends('layouts.main')
+@section('title', 'Tryout')
 
 @section('css')
     <link rel="stylesheet" href="../vendor/chart.js/Chart.min.css">

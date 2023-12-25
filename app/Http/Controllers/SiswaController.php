@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use App\Models\Program;
 
 class SiswaController extends Controller
 {
@@ -53,5 +54,10 @@ class SiswaController extends Controller
     public function sharingSoal()
     {
         return view('siswa/sharing-soal');
+    }
+    public function daftarProgram()
+    {
+        $programs = Program::all();
+        return view('siswa/daftar-program', compact('programs'));
     }
 }

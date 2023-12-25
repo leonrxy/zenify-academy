@@ -1,4 +1,5 @@
 @extends('layouts.main')
+@section('title', 'Dashboard')
 
 @section('css')
     <link rel="stylesheet" href="../vendor/chart.js/Chart.min.css">
@@ -90,7 +91,7 @@
                             <h4>Kelas Aktif</h4>
                         </div>
                         <div class="card-body">
-                            <h5>3</h5>
+                            <h5>0</h5>
                         </div>
                     </div>
                 </div>
@@ -100,7 +101,7 @@
                             <h4>Tugas Belum Selesai</h4>
                         </div>
                         <div class="card-body">
-                            <h5>5</h5>
+                            <h5>0</h5>
                         </div>
                     </div>
                 </div>
@@ -110,10 +111,19 @@
                             <h4>Ujian Mendatang</h4>
                         </div>
                         <div class="card-body">
-                            <h5>2</h5>
+                            <h5>0</h5>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="text-center">
+                <div class="h3 mb-3">Anda belum berlangganan kelas apapun. Silakan kunjungi halaman Program Saya untuk
+                    membeli
+                    paket bimbel yang Anda inginkan.</div>
+                <div><button class="btn btn-primary text-center mb-5"><p class="h5">Program Saya</p></button></div>
             </div>
         </div>
 
@@ -265,9 +275,9 @@
                 <div class="col-md-4">
                     <div class="card">
                         <!-- <div class="float-label">
-                                                                                                                        <h6>Sales</h6>
-                                                                                                                        <h4>$1500</h4>
-                                                                                                                    </div> -->
+                                                                                                                                <h6>Sales</h6>
+                                                                                                                                <h4>$1500</h4>
+                                                                                                                            </div> -->
                         <div class="card-body">
                             <div class="label">
                                 <h6>Statistik Nilai</h6>

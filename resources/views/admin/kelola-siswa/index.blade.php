@@ -148,7 +148,7 @@
                                                         <button type="button" class="btn btn-secondary"
                                                             data-bs-dismiss="modal">Batal</button>
                                                         <form
-                                                            action="{{ route('admin.kelola-program.hapus', ['program' => $siswas->nama_lengkap]) }}"
+                                                            action="{{ route('admin.kelola-siswa.hapus', ['idsiswa' => $siswas->id]) }}"
                                                             method="POST" style="display:inline;">
                                                             @csrf
                                                             @method('DELETE')

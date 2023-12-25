@@ -45,8 +45,20 @@
             </li>
             <li class="">
                 <a href="#" class="link">
-                    <i class="ti-bar-chart"></i>
-                    <span>Kelola Kursus</span>
+                    <i class="ti-ruler-pencil"></i>
+                    <span>Kelola Tryout</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="#" class="link">
+                    <i class="ti-video-camera"></i>
+                    <span>Kelola Video Belajar</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="#" class="link">
+                    <i class="ti-bookmark-alt"></i>
+                    <span>Kelola Live Class</span>
                 </a>
             </li>
 
