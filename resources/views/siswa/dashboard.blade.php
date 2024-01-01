@@ -123,7 +123,7 @@
                 <div class="h3 mb-3">Anda belum berlangganan kelas apapun. Silakan kunjungi halaman Program Saya untuk
                     membeli
                     paket bimbel yang Anda inginkan.</div>
-                <div><button class="btn btn-primary text-center mb-5"><p class="h5">Program Saya</p></button></div>
+                <div><a class="btn btn-primary text-center mb-5" href="{{ route('daftar-program') }}"><p class="h5">Program Saya</p></a></div>
             </div>
         </div>
 
