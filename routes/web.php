@@ -24,7 +24,7 @@ use App\Http\Controllers\KelolaKelasController;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/program', [ProgramController::class, 'homeView']);
+Route::get('/program', [ProgramController::class, 'homeView'])->name('program');
 Route::get('/tentang', function () {
     return view('tentang');
 });

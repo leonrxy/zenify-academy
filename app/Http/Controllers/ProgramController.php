@@ -101,4 +101,99 @@ class ProgramController extends Controller
             return redirect()->route('admin.kelola-program.index')->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
         }
     }
+
+    public function apiIndex()
+    {
+        $programs = Program::all();
+        return response()->json(['data' => $programs]);
+    }
+
+    public function apiShow($id)
+    {
+        $program = Program::find($id);
+
+        if ($program) {
+            return response()->json(['data' => $program]);
+        } else {
+            return response()->json(['error' => 'Program not found'], 404);
+        }
+    }
+
+    public function apiStore(Request $request)
+    {
+        try {
+            $validatedData = $request->validate([
+                'nama' => 'required',
+                'harga' => 'required',
+                'jangka_waktu' => 'required',
+                'jml_pertemuan' => 'required',
+                'waktu_pertemuan' => 'required',
+                'info_1' => 'required',
+                'na_info_1' => '',
+                'info_2' => 'required',
+                'na_info_2' => '',
+                'info_3' => 'required',
+                'na_info_3' => '',
+                'style' => '',
+                'label' => '',
+                'info_label' => '',
+            ]);
+
+            $program = Program::create($validatedData);
+
+            return response()->json(['data' => $program], 201);
+        } catch (ValidationException $e) {
+            return response()->json(['error' => 'Validation error', 'messages' => $e->errors()], 422);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Internal server error', 'message' => $e->getMessage()], 500);
+        }
+    }
+
+    public function apiUpdate(Request $request, $id)
+    {
+        try {
+            $program = Program::find($id);
+
+            if (!$program) {
+                return response()->json(['error' => 'Program not found'], 404);
+            }
+
+            $validatedData = $request->validate([
+                'nama' => 'required',
+                'harga' => 'required',
+                'jangka_waktu' => 'required',
+                'jml_pertemuan' => 'required',
+                'waktu_pertemuan' => 'required',
+                'info_1' => 'required',
+                'na_info_1' => '',
+                'info_2' => 'required',
+                'na_info_2' => '',
+                'info_3' => 'required',
+                'na_info_3' => '',
+                'style' => '',
+                'label' => '',
+                'info_label' => '',
+            ]);
+
+            $program->update($validatedData);
+
+            return response()->json(['data' => $program]);
+        } catch (ValidationException $e) {
+            return response()->json(['error' => 'Validation error', 'messages' => $e->errors()], 422);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Internal server error', 'message' => $e->getMessage()], 500);
+        }
+    }
+
+    public function apiDestroy($id)
+    {
+        $program = Program::find($id);
+
+        if ($program) {
+            $program->delete();
+            return response()->json(['message' => 'Program successfully deleted']);
+        } else {
+            return response()->json(['error' => 'Program not found'], 404);
+        }
+    }
 }
